@@ -1,0 +1,23 @@
+name: StaffTools
+version: 1.0
+main: it.luigisanseverino.stafftools.Main
+api-version: 1.21
+description: Sistema di moderazione staff con warn, mute e ban
+author: LuigiSanseverino
+
+commands:
+  warn:
+    description: Avvisa un giocatore
+    usage: /warn <giocatore> <categoria> <motivo>
+    permission: stafftools.warn
+    permission-message: Non hai il permesso per usare questo comando.
+  warnlist:
+    description: Vedi i warn di un giocatore
+    usage: /warnlist <giocatore>
+    permission: stafftools.warn
+    permission-message: Non hai il permesso per usare questo comando.
+  clearwarns:
+    description: Rimuovi tutti i warn di un giocatore
+    usage: /clearwarns <giocatore>
+    permission: stafftools.warn
+    permission-message: Non hai il permesso per usare questo comando.

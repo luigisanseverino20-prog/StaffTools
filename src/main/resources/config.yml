@@ -1,0 +1,13 @@
+# Numero di warn prima del ban automatico per categoria
+warn-limits:
+  insulto: 3
+  cheat: 3
+  spam: 3
+  avviso: 0
+
+# Messaggi
+messages:
+  warn-sent: "&c[StaffTools] &fHai avvisato &e{player} &fper: &c{motivo}"
+  warn-received: "&c[!] &fSei stato avvisato per: &e{motivo} &f| Warn: &c{count}/{max}"
+  warn-list: "&e[StaffTools] &fWarn di &e{player}&f: &c{count}"
+  auto-ban: "&c[StaffTools] &e{player} &fe' stato bannato automaticamente dopo {count} warn per {categoria}"
