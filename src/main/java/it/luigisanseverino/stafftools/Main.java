@@ -17,6 +17,9 @@ public class Main extends JavaPlugin {
         getCommand("warn").setExecutor(new WarnCommand(this));
         getCommand("warnlist").setExecutor(new WarnCommand(this));
         getCommand("clearwarns").setExecutor(new WarnCommand(this));
+        getCommand("unban").setExecutor(new WarnCommand(this));
+        getCommand("unwarn").setExecutor(new WarnCommand(this));
+
 
         getLogger().info("StaffTools avviato!");
     }

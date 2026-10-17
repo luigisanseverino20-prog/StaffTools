@@ -103,6 +103,44 @@ public class WarnCommand implements CommandExecutor {
             return true;
         }
 
+        // Comando /unban
+        if (command.getName().equalsIgnoreCase("unban")) {
+            if (args.length < 1) {
+                sender.sendMessage(ChatColor.RED + "Uso: /unban <giocatore>");
+                return true;
+            }
+
+            String playerName = args[0];
+            Bukkit.getBanList(org.bukkit.BanList.Type.NAME).pardon(playerName);
+            sender.sendMessage(ChatColor.GREEN +
+                    "[StaffTools] " + playerName + " è stato sbannato.");
+            return true;
+        }
+
+// Comando /unwarn
+        if (command.getName().equalsIgnoreCase("unwarn")) {
+            if (args.length < 2) {
+                sender.sendMessage(ChatColor.RED + "Uso: /unwarn <giocatore> <categoria>");
+                return true;
+            }
+
+            String playerName = args[0];
+            String categoria = args[1].toLowerCase();
+            Map<String, Integer> playerWarns = plugin.getWarnManager().getWarns(playerName);
+
+            if (!playerWarns.containsKey(categoria)) {
+                sender.sendMessage(ChatColor.RED + playerName +
+                        " non ha warn per la categoria: " + categoria);
+                return true;
+            }
+
+            playerWarns.remove(categoria);
+            plugin.getWarnManager().saveWarns();
+            sender.sendMessage(ChatColor.GREEN +
+                    "[StaffTools] Warn " + categoria + " di " + playerName + " rimosso.");
+            return true;
+        }
+
         return false;
     }
 }

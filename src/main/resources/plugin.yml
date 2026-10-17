@@ -21,3 +21,13 @@ commands:
     usage: /clearwarns <giocatore>
     permission: stafftools.warn
     permission-message: Non hai il permesso per usare questo comando.
+  unban:
+    description: Rimuove il ban di un giocatore
+    usage: /unban <giocatore>
+    permission: stafftools.unban
+    permission-message: Non hai il permesso per usare questo comando.
+  unwarn:
+    description: Rimuove un warn specifico di un giocatore
+    usage: /unwarn <giocatore> <categoria>
+    permission: stafftools.warn
+    permission-message: Non hai il permesso per usare questo comando.
